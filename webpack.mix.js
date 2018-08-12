@@ -19,7 +19,6 @@ mix.sass('src/scss/style.scss', 'htdocs/common/css')
    .sourceMaps()
 
 mix.browserSync({
-  files: 'htdocs/',
   server: 'htdocs',
   proxy: false,
   files: [
