@@ -1,9 +1,9 @@
 const mix = require('laravel-mix');
 
-mix.js('src/js/script.js', 'htdocs/common/js')
+mix.js('resources/assets/js/script.js', 'public/common/js')
    .sourceMaps()
    
-mix.sass('src/scss/style.scss', 'htdocs/common/css')
+mix.sass('resources/assets/scss/style.scss', 'public/common/css')
    .options({
       processCssUrls: false,
       postCss: [
@@ -19,12 +19,12 @@ mix.sass('src/scss/style.scss', 'htdocs/common/css')
    .sourceMaps()
 
 mix.browserSync({
-  server: 'htdocs',
+  server: 'public',
   proxy: false,
   files: [
-    'htdocs/**/*.html',
-    'htdocs/**/*.php',
-    'htdocs/common/js/*.js',
-    'htdocs/common/css/*.css',
+    'public/**/*.html',
+    'public/**/*.php',
+    'public/common/js/*.js',
+    'public/common/css/*.css',
   ]
 })
