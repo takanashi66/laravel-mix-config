@@ -5,14 +5,11 @@ mix.js('resources/assets/js/script.js', 'public/common/js')
     .options({
         processCssUrls: false,
         postCss: [
+            require('autoprefixer')({
+                grid: true
+            }),
             require('css-mqpacker')()
-        ],
-        autoprefixer: {
-            browsers: ['last 2 versions'],
-            options: {
-                grid: true,
-            }
-        }
+        ]
     })
     .sourceMaps()
 
