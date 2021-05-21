@@ -13,9 +13,13 @@ mix.js('resources/assets/js/script.js', 'public/common/js')
     })
     .sourceMaps()
 
-mix.webpackConfig({
-    devtool: "inline-source-map"
-})
+if (!mix.inProduction()) {
+    mix.webpackConfig({
+        devtool: 'inline-source-map'
+    })
+} else {
+    mix.version();
+}
 
 mix.browserSync({
     server: 'public',
