@@ -11,13 +11,17 @@
         "svg": "npx svg-sprite -C svg.config.json --shape-transform-svgo svgo.config.json resources/assets/svg/*.svg",
         "webp-png": "for file in public/common/img/*.png; do cwebp -lossless -metadata icc \"$file\" -o \"${file%.*}.webp\"; done",
         "webp-jpg": "for file in public/common/img/*.jpg; do cwebp -q 75 -metadata icc -sharp_yuv \"$file\" -o \"${file%.*}.webp\"; done",
-        "webp": "npm run webp-png; npm run webp-jpg;"
+        "webp": "npm run webp-png; npm run webp-jpg;",
+        "img": "node imagemin.config.js"
     },
     "devDependencies": {
         "browser-sync": "^2.26.14",
         "browser-sync-webpack-plugin": "^2.3.0",
         "cross-env": "^7.0.3",
         "css-mqpacker": "^7.0.0",
+        "imagemin-keep-folder": "^5.3.2",
+        "imagemin-mozjpeg": "^9.0.0",
+        "imagemin-pngquant": "^9.0.2",
         "laravel-mix": "^6.0.13",
         "postcss": "^8.2.9",
         "sass": "^1.32.8",
