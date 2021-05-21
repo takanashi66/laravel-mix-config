@@ -9,11 +9,7 @@
         "prod": "npm run production",
         "production": "mix --production",
         "svg": "npx svg-sprite -C svg.config.json --shape-transform-svgo svgo.config.json resources/assets/svg/*.svg",
-        "webp-png": "for file in resources/assets/img/*.png; do cwebp -lossless -metadata icc \"$file\" -o \"${file%.*}.webp\"; done",
-        "webp-jpg": "for file in resources/assets/img/*.jpg; do cwebp -q 75 -metadata icc -sharp_yuv \"$file\" -o \"${file%.*}.webp\"; done",
-        "webp": "npm run webp-png; npm run webp-jpg;",
-        "img": "node imagemin.config.js",
-        "images": "npm run webp & npm run img"
+        "img": "node imagemin.config.js"
     },
     "devDependencies": {
         "browser-sync": "^2.26.14",
@@ -23,6 +19,7 @@
         "imagemin-keep-folder": "^5.3.2",
         "imagemin-mozjpeg": "^9.0.0",
         "imagemin-pngquant": "^9.0.2",
+        "imagemin-webp": "^6.0.0",
         "laravel-mix": "^6.0.13",
         "postcss": "^8.2.9",
         "sass": "^1.32.8",
