@@ -9,10 +9,11 @@
         "prod": "npm run production",
         "production": "mix --production",
         "svg": "npx svg-sprite -C svg.config.json --shape-transform-svgo svgo.config.json resources/assets/svg/*.svg",
-        "webp-png": "for file in public/common/img/*.png; do cwebp -lossless -metadata icc \"$file\" -o \"${file%.*}.webp\"; done",
-        "webp-jpg": "for file in public/common/img/*.jpg; do cwebp -q 75 -metadata icc -sharp_yuv \"$file\" -o \"${file%.*}.webp\"; done",
+        "webp-png": "for file in resources/assets/img/*.png; do cwebp -lossless -metadata icc \"$file\" -o \"${file%.*}.webp\"; done",
+        "webp-jpg": "for file in resources/assets/img/*.jpg; do cwebp -q 75 -metadata icc -sharp_yuv \"$file\" -o \"${file%.*}.webp\"; done",
         "webp": "npm run webp-png; npm run webp-jpg;",
-        "img": "node imagemin.config.js"
+        "img": "node imagemin.config.js",
+        "images": "npm run webp & npm run img"
     },
     "devDependencies": {
         "browser-sync": "^2.26.14",
