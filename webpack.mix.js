@@ -8,7 +8,7 @@ mix.js('resources/assets/js/script.js', 'public/common/js')
             require('autoprefixer')({
                 grid: true
             }),
-            require('css-mqpacker')()
+            require('postcss-sort-media-queries')()
         ]
     })
     .sourceMaps()
