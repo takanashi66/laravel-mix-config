@@ -8,7 +8,7 @@
         "hot": "mix watch --hot",
         "prod": "npm run production",
         "production": "mix --production",
-        "svg": "npx svg-sprite -C svg.config.json --shape-transform-svgo svgo.config.json resources/assets/svg/*.svg",
+        "svg": "npx svg-sprite -C svg.config.json --shape-transform-svgo svgo.config.json resources/svg/*.svg",
         "img": "node --trace-warnings imagemin.config.mjs"
     },
     "devDependencies": {

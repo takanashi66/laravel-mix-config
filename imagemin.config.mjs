@@ -4,7 +4,7 @@ import imageminPngquant from 'imagemin-pngquant';
 import imageminWebp from 'imagemin-webp';
 
 (async () => {
-  await imagemin(['resources/assets/img/**/*.{jpg,png}'], {
+  await imagemin(['resources/img/**/*.{jpg,png}'], {
     destination: 'public/common/img',
     plugins: [
       imageminMozjpeg({ quality: 80 }),
@@ -16,7 +16,7 @@ import imageminWebp from 'imagemin-webp';
 })();
 
 (async () => {
-  await imagemin(['resources/assets/img/**/*.{jpg,png}'], {
+  await imagemin(['resources/img/**/*.{jpg,png}'], {
     destination: 'public/common/img',
     plugins: [
       imageminWebp({ quality: 50 })
