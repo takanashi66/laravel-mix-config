@@ -9,16 +9,16 @@
         "prod": "npm run production",
         "production": "mix --production",
         "svg": "npx svg-sprite -C svg.config.json --shape-transform-svgo svgo.config.json resources/assets/svg/*.svg",
-        "img": "node imagemin.config.js"
+        "img": "node --trace-warnings imagemin.config.mjs"
     },
     "devDependencies": {
         "browser-sync": "^2.27.4",
         "browser-sync-webpack-plugin": "^2.3.0",
         "cross-env": "^7.0.3",
-        "imagemin-keep-folder": "^5.3.2",
-        "imagemin-mozjpeg": "^9.0.0",
+        "imagemin": "^8.0.1",
+        "imagemin-mozjpeg": "^10.0.0",
         "imagemin-pngquant": "^9.0.2",
-        "imagemin-webp": "^6.0.0",
+        "imagemin-webp": "^7.0.0",
         "laravel-mix": "^6.0.25",
         "postcss": "^8.3.5",
         "postcss-sort-media-queries": "^3.11.12",
