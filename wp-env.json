@@ -1,0 +1,20 @@
+{
+    "core": null,
+    "phpVersion": null,
+    "port": 9999,
+    "env": {
+        "tests": {
+            "port": 0000
+        }
+    },
+    "mappings": {
+        "wp-content/plugins": "./public/plugins",
+        "wp-content/themes": "./public/themes",
+        "wp-content/uploads": "./public/uploads",
+        "sql": "./sql"
+    },
+    "config": {
+        "WP_DEBUG": true,
+        "SCRIPT_DEBUG": true
+    }
+}
