@@ -1,4 +1,4 @@
-import imagemin from 'imagemin';
+import imagemin from 'imagemin-keep-folder';
 import imageminMozjpeg from 'imagemin-mozjpeg';
 import imageminPngquant from 'imagemin-pngquant';
 import imageminWebp from 'imagemin-webp';
@@ -9,7 +9,10 @@ import imageminWebp from 'imagemin-webp';
     plugins: [
       imageminMozjpeg({ quality: 80 }),
       imageminPngquant({ quality: [0.65, 0.8] }),
-    ]
+    ],
+    replaceOutputDir: output => {
+        return output.replace(/img\//, '../public/common/img/')
+    }
   });
 
   console.log('Images optimized');
@@ -20,7 +23,10 @@ import imageminWebp from 'imagemin-webp';
     destination: 'public/common/img',
     plugins: [
       imageminWebp({ quality: 50 })
-    ]
+    ],
+    replaceOutputDir: output => {
+        return output.replace(/img\//, '../public/common/img/')
+    }
   });
 
   console.log('webp optimized');
