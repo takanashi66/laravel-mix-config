@@ -1,5 +1,5 @@
 {
-    "core": null,
+    "core": "https://ja.wordpress.org/latest-ja.zip",
     "phpVersion": null,
     "port": 9999,
     "env": {
