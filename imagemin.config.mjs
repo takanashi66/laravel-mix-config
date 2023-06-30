@@ -21,7 +21,10 @@ import imageminSvgo from 'imagemin-svgo';
 (async () => {
     await imagemin(['resources/img/**/*.{jpg,png}'], {
         plugins: [
-            imageminWebp({ quality: 50 })
+            imageminWebp({
+                quality: 50,
+                metadata: "all"
+            })
         ],
         replaceOutputDir: output => {
             return output.replace(/img\//, '../public/common/img/')
