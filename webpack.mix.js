@@ -1,14 +1,13 @@
 const mix = require('laravel-mix');
 
 mix.js('resources/js/script.js', 'public/common/js')
-    .sass('resources/scss/style.scss', 'public/common/css')
+    .css('resources/scss/style.css', 'public/common/css')
     .options({
         processCssUrls: false,
         postCss: [
             require('autoprefixer')({
                 grid: true
-            }),
-            require('postcss-sort-media-queries')()
+            })
         ]
     })
     .sourceMaps()
