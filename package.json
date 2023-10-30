@@ -21,7 +21,7 @@
         "imagemin-webp": "^7.0.0",
         "imagemin-svgo": "^10.0.1",
         "laravel-mix": "^6.0.25",
-        "postcss": "^8.3.5",
+        "postcss": "^8.3.5"
     },
     "browserslist": [
         "> 0.2%, not dead",
